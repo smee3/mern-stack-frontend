@@ -16,7 +16,7 @@ const ReadAll = () => {
     return (
         <div>
             {allItems && allItems.allItems.map(item =>
-                <Link to="" key={item._id}>
+                <Link to={`/item/${item._id}`} key={item._id}>
                     <img src={require(`../../images${item.image}`)} alt="item" />
                     <div>
                         <h2>¥{item.price}</h2>
