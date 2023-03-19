@@ -46,8 +46,8 @@ const DeleteItem = () => {
 
     if (loginUser === email) {
         return (
-            <div>
-                <h1>アイテム削除</h1>
+            <div className="delete-page">
+                <h1 className="page-title">アイテム削除</h1>
                 <form onSubmit={handleSubmit}>
                     <h2>{title}</h2>
                     {image && <img src={require(`../../images${image}`)} alt="item" />}
