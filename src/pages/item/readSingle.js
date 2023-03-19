@@ -22,7 +22,7 @@ const ReadSingleItem = () => {
     }, [params.id])
 
     return (
-        <div>
+        <div className="readSingle">
             <div>
                 {image && <img src={require(`../../images${image}`)} alt="item" />}
             </div>
