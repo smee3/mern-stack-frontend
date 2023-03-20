@@ -11,7 +11,7 @@ const ReadSingleItem = () => {
 
     useEffect(() => {
         const getSingleItem = async () => {
-            const response = await fetch(`http://localhost:5000/item/${params.id}`)
+            const response = await fetch(`https://mern-stack-books.herokuapp.com/item/${params.id}`)
             const jsonResponse = await response.json()
             setTitle(jsonResponse.singleItem.title)
             setPrice(jsonResponse.singleItem.price)
