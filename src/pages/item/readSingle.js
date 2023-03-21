@@ -24,7 +24,7 @@ const ReadSingleItem = () => {
     return (
         <div className="readSingle">
             <div>
-                {image && <img src={require(`../../images${image}`)} alt="item" />}
+                {image && <img src={image} alt="item" />}
             </div>
             <div>
                 <h1>{title}</h1>

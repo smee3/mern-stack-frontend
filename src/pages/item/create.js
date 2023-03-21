@@ -1,5 +1,6 @@
 import { useState } from "react"
 import useAuth from "../../utils/useAuth"
+import ImgInput from "../../components/imgInput"
 
 const CreateItem = () => {
     const [title, setTitle] = useState("")
@@ -37,6 +38,7 @@ const CreateItem = () => {
         return (
             <div>
                 <h1 className="page-title">アイテム作成</h1>
+                <ImgInput setImage={setImage} />
                 <form onSubmit={handleSubmit}>
                     <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" name="title" placeholder="アイテム名" required />
                     <input value={price} onChange={(e) => setPrice(e.target.value)} type="text" name="price" placeholder="価格" required />
