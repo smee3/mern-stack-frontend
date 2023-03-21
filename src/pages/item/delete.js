@@ -50,7 +50,7 @@ const DeleteItem = () => {
                 <h1 className="page-title">アイテム削除</h1>
                 <form onSubmit={handleSubmit}>
                     <h2>{title}</h2>
-                    {image && <img src={require(`../../images${image}`)} alt="item" />}
+                    {image && <img src={image} alt="item" />}
                     <h3>¥{price}</h3>
                     <p>{description}</p>
                     <button>削除</button>
