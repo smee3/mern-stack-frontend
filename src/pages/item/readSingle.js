@@ -10,6 +10,8 @@ const ReadSingleItem = () => {
     const [description, setDescription] = useState("")
 
     useEffect(() => {
+        document.title = title
+
         const getSingleItem = async () => {
             const response = await fetch(`https://mern-stack-books.herokuapp.com/item/${params.id}`)
             const jsonResponse = await response.json()
@@ -19,7 +21,7 @@ const ReadSingleItem = () => {
             setDescription(jsonResponse.singleItem.description)
         }
         getSingleItem()
-    }, [params.id])
+    }, [params.id, title])
 
     return (
         <div className="readSingle">
