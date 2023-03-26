@@ -12,6 +12,8 @@ const UpdateItem = () => {
     const [email, setEmail] = useState("")
 
     useEffect(() => {
+        document.title = "編集ページ"
+
         const getSingleItem = async () => {
             const response = await fetch(`https://mern-stack-books.herokuapp.com/item/${params.id}`)
             const jsonResponse = await response.json()

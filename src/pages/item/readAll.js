@@ -5,6 +5,8 @@ const ReadAll = () => {
     const [allItems, setAllItems] = useState()
 
     useEffect(() => {
+        document.title = "MERN Market"
+
         const getAllItems = async () => {
             const response = await fetch("https://mern-stack-books.herokuapp.com")
             const jsonResponse = await response.json()
